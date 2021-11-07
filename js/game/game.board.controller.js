@@ -25,12 +25,16 @@ function getSixIndex(counter, characters, selected){
 function selectCharacters(characters){
    const selection =  getSixIndex(1,characters,[]);  
    const charactersInfo = selection.map(async item=>{
-        const origin = await getOrigin(item.origin.url);
-        if(!origin.error)
-            return {...item, apOrigin: origin.dimension}
-        else 
-            throw Error("API FAIL")
-        //return {...item, apOrigin:""}
+       try {
+           const origin = await getOrigin(item.origin.url);
+           if(!origin.error)
+               return {...item, apOrigin: origin.dimension}
+   
+           return {...item, apOrigin:""}
+       } catch {
+           throw Error("API FAIL")
+       }
+
    })  
    return Promise.all(charactersInfo);
 }
@@ -43,14 +47,17 @@ function shuffleCharacters(characters){
 
 async function getCharacters(){
     const page = getRandom(1,42);
-    const characters = await getCharacter(page);
-    if(!characters.error) {
-        const response = await selectCharacters(characters);
-        const shuffle = shuffleCharacters(response);
-        return shuffle;
+    try {
+        const characters = await getCharacter(page);
+        if(!characters.error) {
+            const response = await selectCharacters(characters);
+            const shuffle = shuffleCharacters(response);
+            return shuffle;
+        }
+    } catch {
+        throw Error("API FAIL")
     }
 
-    throw Error("API FAIL")
 }
 
 function OpenAutomaticaly(){
