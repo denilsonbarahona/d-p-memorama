@@ -1,0 +1,11 @@
+
+
+.playcard--iscardback:active {
+ filter: brightness(90%);
+}
+
+.playcardback-img {
+    inline-size: 100%;
+    block-size: 100%;
+}
+

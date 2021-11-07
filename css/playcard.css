@@ -1,0 +1,46 @@
+@import "./playcardback.css";
+@import "./stadistic.css";
+@import "./playcard-info.css";
+@import "./playcard-profile.css";
+
+
+.card-group{ 
+    position: relative;
+    inline-size: 8.5625rem;
+    block-size: 12.5rem; 
+    box-sizing: border-box;  
+}
+
+.card-group:is(.card-group--isopen, :active)
+.playcard--iscardback {
+    transform: rotateY(180deg);
+}
+
+
+.playcard--iscardfront {
+    transform: rotateY(180deg);
+}
+ 
+.card-group:is(.card-group--isopen, :active)
+.playcard--iscardfront {
+    transform: rotateY(0deg);
+}
+
+.playcard { 
+    position: absolute;
+    inline-size: inherit;
+    block-size: inherit;
+    cursor: pointer; 
+    overflow: hidden;     
+    border-radius: .5rem;
+    backface-visibility: hidden;
+    transition: 1s transform; 
+}
+
+@media screen and (min-width:1024px) {
+    .card-group {
+        inline-size: 17.5rem;
+        block-size: 25.5rem;
+    }
+        
+}

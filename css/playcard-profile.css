@@ -1,0 +1,47 @@
+.playcard-profile {
+    inline-size: inherit;
+    block-size: 6.75rem;    
+    position: relative;
+}
+
+.playcard-img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+}
+
+.playcard-tag {
+    position: absolute;
+    margin: 0;
+    inset-block-start: .4375rem;
+    inset-inline-start: .4375rem;
+    font-size: .25rem;
+    font-weight: 700;
+    font-family: roboto;
+    text-transform: uppercase;
+    background-color: var(--black-1);
+    color: var(--white);
+    padding-block-start: 2.5px;
+    padding-block-end: 2.5px;
+    padding-inline-start: 4.90px;
+    padding-inline-end: 4.90px;
+    border-radius: 0.25rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .playcard-profile {
+        block-size: 13.75rem;
+    }  
+
+    .playcard-tag {
+        font-size: 0.625rem;
+        font-weight: 700;
+        inset-block-start: 1rem;
+        inset-inline-start: 1rem;
+        font-family: roboto;
+        padding-block-start: 5px;
+        padding-block-end: 5px;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+    }
+}

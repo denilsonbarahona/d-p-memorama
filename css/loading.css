@@ -1,0 +1,39 @@
+.loading {
+    position: relative;  
+}
+
+.loading>*{
+    margin: 0;
+}
+
+.loading-dots {
+    position: absolute;    
+    inset-inline-end: 0;
+    transform: translateX(100%);
+    inset-block-start: -1px;   
+    display: flex;
+}
+
+.loading-dots span {
+    animation: bounce .6s ease-in-out infinite;
+}
+
+.loading span:nth-of-type(2){ 
+    animation-delay: .2s;
+}
+
+.loading span:nth-of-type(3){ 
+    animation-delay: .4s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-20%);    
+    }
+    50% {
+        transform: translateY(-10%);    
+    }
+    100% {
+        transform: translateY(0);       
+    }
+}

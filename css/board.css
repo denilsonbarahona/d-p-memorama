@@ -1,0 +1,15 @@
+.board{
+    display: grid;
+    gap: 1rem;
+    margin: 1rem;
+    justify-content: center;
+    grid-template-columns: repeat(4, 8.5625rem);
+}
+
+@media screen and (min-width: 1024px) {
+    .board{
+        margin: 5rem;
+        gap: 1rem;
+        grid-template-columns: repeat(4, 17.5rem);
+    }
+}

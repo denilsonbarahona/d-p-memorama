@@ -1,0 +1,29 @@
+.logo{    
+    inline-size: 4.5625rem;
+    block-size: 1.5rem;
+}
+
+.logo-img {
+    vertical-align: middle;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+}
+
+.logo--gt{
+    inline-size: 7.6875rem;
+    block-size: 2.5rem;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .logo {
+        inline-size: 10.75rem;
+        block-size: 3.5rem;
+    }
+
+    .logo--gt{
+        inline-size: 15.39625rem;
+        block-size: 5rem;
+    }
+}

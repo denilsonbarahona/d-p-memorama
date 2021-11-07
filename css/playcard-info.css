@@ -1,0 +1,38 @@
+.playcard-info { 
+    padding: .4rem; 
+    background-color: var(--white);
+    display: grid;
+    gap: 0.625rem; 
+    inline-size: 100%;
+    box-sizing: border-box; 
+    block-size: 6rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "header header"
+                         ". ."
+                         "bottom bottom";  
+}
+
+.playcard-info-header {
+    grid-area: header;
+    margin: 0;
+    padding: 0;
+    font-size: 0.5rem;
+    font-family: roboto;
+    font-weight: 700;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .playcard-info {
+        inline-size: inherit;
+        block-size: 11.75rem;
+        padding: 1rem;
+        gap: 1.5rem; 
+    }
+
+    .playcard-info-header {
+        margin: 0;
+        font: var(--headline2);
+        font-size: 1.2rem;
+    }
+}

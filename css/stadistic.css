@@ -1,0 +1,69 @@
+.stadistic{
+    display: flex; 
+    align-items: center;
+    gap: .25rem;
+    justify-content: flex-start;
+}
+
+.stadistic-bottom{
+    grid-area: bottom;
+}
+
+.stadistic >* {
+    margin: 0;
+    padding: 0
+}
+
+.stadistic-signal {
+    inline-size: 1rem;
+    block-size: 1rem;
+    border-radius: 50%;
+    box-sizing: border-box; 
+    display: grid;
+    text-align: center;
+    align-content: center; 
+}
+
+.stadistic-icon {
+    font-size: 0.5rem;
+}
+
+.stadistic-text {
+    font-weight: 400;
+    font-family: roboto;
+    font-size: .5rem;    
+}
+
+.stadistic--yellow{
+    background-color: var(--yellow);
+}
+
+.stadistic--green {
+    background-color: #3FCD65;
+}
+
+.stadistic--blue {
+    background-color: var(--blue); 
+}
+
+
+@media screen and (min-width:1024px) {
+
+    .stadistic{
+        gap: .5rem;
+    }
+    
+    .stadistic-signal {
+        inline-size: 2rem;
+        block-size: 2rem;
+    } 
+
+    .stadistic-text {
+        font: var(--body1-regular);
+        font-size: 1rem;
+    }
+
+    .stadistic-icon {
+        font-size: 1rem;
+    }
+}

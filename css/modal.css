@@ -1,0 +1,20 @@
+.modal {
+    padding: 0;  
+    border: none;
+    box-sizing: border-box;
+    overflow: hidden; 
+    border-radius: 2.5rem;
+    inline-size: 21.875rem;
+    block-size: 15.625rem; 
+}
+
+.modal--bg::backdrop {
+    background: rgba(0, 0, 0, .7);
+}
+
+@media screen and (min-width:1024px) {
+    .modal {
+        block-size: 26.1875rem;
+        inline-size: 36.75rem;
+    }
+}

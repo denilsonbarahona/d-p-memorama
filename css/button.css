@@ -1,0 +1,30 @@
+.button {
+    cursor: pointer;
+    background-color: var(--green);
+    border: 1px solid transparent;
+    display: grid;
+    align-content: center;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font: var(--button);
+    color: #103611;
+    text-align: center;
+    inline-size: 7.75rem;
+    block-size: 2rem;
+    box-sizing: border-box;
+    border-radius: 3.125rem;
+}
+
+.button:active {
+    transform: scale(.95);
+}
+
+
+@media screen and (min-width:1024px) {
+    .button {
+        inline-size: 8.9375rem;
+        block-size: 3rem;
+        font-size: 1.2rem;
+    }
+}   
